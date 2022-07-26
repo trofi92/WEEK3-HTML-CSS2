@@ -1,0 +1,6 @@
+@import "reset.css";
+
+body {
+    
+    font-family: "Poppins", sans-serif;
+    background-image: radial-gradient(circle, #e4e79d, #e3e287, #e3dc71, #e3d659, #e5cf3f);}

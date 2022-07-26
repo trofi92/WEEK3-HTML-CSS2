@@ -13,7 +13,7 @@
  <nav class="nav-style">
     <h1>Node.js 3주차 과제</h1>
     <h2>자기소개서 예제</h2><br>
-    <h3 style="margin-left : 550px;">엄세영</h3>
+    <h3 style="margin-left : 550px; display: inline-blockr;">엄세영</h3>
  </nav>
 <br>
 
@@ -73,14 +73,14 @@
 
 <section class="sec-b">
     <div class="source">
-        <b>SOURCES</b> : <br><br> 
+        <b>SOURCES(LINK)</b> : <br><br> 
         <b> Button : </b><br><br>  <p style="margin-bottom: 2em;"><a href="https://www.youtube.com/c/OnlineTutorials4Designers/videos">Yotube channel "Online Tutorials"</a></p>
         <b>Background Color:</b><br><br> <p style="margin-bottom: 2em;"><a href="https://mycolor.space/gradient?ori=circle&hex=%23E4E79D&hex2=%23E5CF3F&sub=1"> mycolor.space</a> </p>
         <p><a href="https://cssgradient.io/">CSS Gradient</a> </p>
     </div>
 </section>
 
-
+<br>
 <footer>
     <hr class="line-gradient">
     <p><b>CONTACT</b></p><br>
@@ -103,13 +103,13 @@
       <span class="icon"><ion-icon name="videocam-outline"></ion-icon></span>
       <span class="title"><a class="a-tag" href="https://www.youtube.com/">Youtube</a></span>
     </li>
-    <li style="--i: #ffa9c6; --j: #f434e2">
+    <!-- <li style="--i: #ffa9c6; --j: #f434e2">
       <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
       <span class="title"><a class="a-tag" href="https://www.google.co.kr/imghp?hl=ko&ogbl">Photos</a></span>
-    </li>
+    </li> -->
   </ul>
 
-  
+
 </footer>
 <hr class="line-gradient">
 <form class="handle-fs">
@@ -125,21 +125,37 @@
     <input type="radio" id="부족했음" name="평가">
     <label for="부족했음">Bad</label><br>
 
-    <input
+    <input class="submit"
+    onClick="handleSubmitInput()";
     type="submit" 
     placeholder="제출"
     style="border: 2px dashed azure; border-radius: 10%;
-    font-weight: 200;
-    background-color: #ffa9c6;"
+    font-weight: 600;
+    background-color: yellow;
+    width: 150px;
+    cursor: pointer;"
     >
 
   </fieldset>
 </form>
+
+<br>
+<br>
+<h3>↓More Info? Click here!↓</h3>
+<br>
+<ul>
+<li style="--i: #ffa9c6; --j: #f434e2; display: inline-flex; overflow : hidden;">
+  <span class="icon"><ion-icon name="checkmark-done-outline"></ion-icon></span>
+  <span class="title"><a class="a-tag" class="to-login" onClick="handleToLogin()" href="/home/edu02/WEEK3-HTML-CSS2/login.html">Join</a></span>
+</li>
+</ul>
+
 </div>
 </div>
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

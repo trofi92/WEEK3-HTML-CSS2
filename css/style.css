@@ -19,8 +19,8 @@ hr {
 
 table, th, td {
     border: 1px;
-    background: rgb(36,28,0);
-    background: linear-gradient(90deg, rgba(36,28,0,1) 0%, rgba(207,237,24,1) 14%, rgba(242,226,220,0.6811099439775911) 80%);
+    background: rgba(217,237,24,1);
+  
     
 }
 
@@ -29,6 +29,7 @@ td {
 }
 
 footer {
+    font-family: "Helvetica";
     display: inline-block;
     margin-top: 10px;
     margin-left: auto;
@@ -58,7 +59,8 @@ footer {
     text-align: center;
     align-items: center;
     border: 1px solid tomato;
-    height: 1100px;
+    border-radius: 25px;
+    height: 1260px;
     width: 650px;
 }
 
@@ -71,4 +73,8 @@ footer {
 
 .handle-fs {
     display: inline-block;
+    background: linear-gradient(90deg, rgba(236,28,0,1) 0%, rgba(227,237,24,1) 14%, rgba(262,236,220,0.6811099439775911) 75%);
+    color : darkblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 }
