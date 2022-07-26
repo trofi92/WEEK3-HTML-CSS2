@@ -26,6 +26,7 @@
     <td>2. 학력</td>
     <td>3. 경력</td>
     <td>4. 소개</td>
+    <td>5. 참고자료</td>
     </tr>
 </table>
 </div>
@@ -73,7 +74,7 @@
 
 <section class="sec-b">
     <div class="source">
-        <b>SOURCES(LINK)</b> : <br><br> 
+        <b>5. 참고자료(LINK)</b> : <br><br> 
         <b> Button : </b><br><br>  <p style="margin-bottom: 2em;"><a href="https://www.youtube.com/c/OnlineTutorials4Designers/videos">Yotube channel "Online Tutorials"</a></p>
         <b>Background Color:</b><br><br> <p style="margin-bottom: 2em;"><a href="https://mycolor.space/gradient?ori=circle&hex=%23E4E79D&hex2=%23E5CF3F&sub=1"> mycolor.space</a> </p>
         <p><a href="https://cssgradient.io/">CSS Gradient</a> </p>
@@ -112,21 +113,28 @@
 
 </footer>
 <hr class="line-gradient">
-<form class="handle-fs">
+<button style="font-size: 15px; font-weight:700; display: inline-block;"
+class="visible"
+onclick="handleVisible()"
+type="button"
+>평가에 참여해주세요!</button>
+<form id="rating" style=" visibility: hidden;
+">
+  <br>
   <fieldset>
     <legend>페이지 내용은 어떠셨나요?</legend>
 
-    <input type="radio" id="훌륭했음" name="평가">
-    <label for="훌륭했음">Good</label><br/>
+    <input class="input-hover" type="radio" id="훌륭했음" name="평가">
+    <label class="input-hover" for="훌륭했음">Good</label><br/>
 
-    <input type="radio" id="평범했음" name="평가">
-    <label for="평범했음">Normal</label><br/>
+    <input class="input-hover" type="radio" id="평범했음" name="평가">
+    <label class="input-hover" for="평범했음">Normal</label><br/>
 
-    <input type="radio" id="부족했음" name="평가">
-    <label for="부족했음">Bad</label><br>
+    <input class="input-hover" type="radio" id="부족했음" name="평가">
+    <label class="input-hover" for="부족했음">Bad</label><br>
 
     <input class="submit"
-    onClick="handleSubmitInput()";
+    onClick="handleSubmitInput()"
     type="submit" 
     placeholder="제출"
     style="border: 2px dashed azure; border-radius: 10%;
@@ -138,9 +146,6 @@
 
   </fieldset>
 </form>
-
-<br>
-<br>
 <h3>↓More Info? Click here!↓</h3>
 <br>
 <ul>

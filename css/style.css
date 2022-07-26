@@ -71,10 +71,20 @@ footer {
     display: block;
 }
 
-.handle-fs {
+.Fs {
     display: inline-block;
-    background: linear-gradient(90deg, rgba(236,28,0,1) 0%, rgba(227,237,24,1) 14%, rgba(262,236,220,0.6811099439775911) 75%);
-    color : darkblue;
+    background-image: radial-gradient(circle, #e4e79d, #e3e287, #e3dc71, #e3d659, #e5cf3f);
+    color : rgba(36,28,0,1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
 }
+
+
+fieldset .input-hover:hover {
+    background-color: orangered;
+    border-radius: 99%;
+    opacity: 0.7;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
