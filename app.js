@@ -15,13 +15,13 @@ function handleToLogin() {
 
 
 function handleVisible() {
-    const visible = document.getElementById("rating"); 
-    if (rating.style.visibility !== "hidden") {
-        rating.style.visibility = "hidden";
+    const display = document.getElementById("rating"); 
+    if (rating.style.display !== "none") {
+        rating.style.display = "none";
     }
     else {
-        rating.style.visibility = "visible";
+        rating.style.display = "block";
     }
 }
 
-console.log(rating)
+console.log(rating);

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/login.css">
     <title>login</title>
-</head>
+  </head>
 
-<body bgcolor='#CAC3B2'>
+  <body bgcolor='#CAC3B2'>
 
     
     <form name="input" method="post" action="">
@@ -18,28 +19,28 @@
         </tr>
         <tr weight="800">
           <td align="center"><b><span id="star">* </span>아이디:<b></td>
-          <td colspan="5">
-  
-            <input type="text" id="id" value="" size="20" maxlength="15" required />
-            4~12자의 영문 대소문자와 숫자로만 입력
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><b><span id="star">* </span>비밀번호:<b></td>
-          <td colspan="5">
-            <input type="password" id="pw" value="" size="20" onblur="checkPw()" required />
-            4~12자의 영문 대소문자와 숫자로만 입력
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><b style=" font-size:10pt"><span id="star">* </span>비밀번호확인:<b></td>
-          <td colspan="5">
-            <input type="password" id="repw" value="" size="20" required />
-  
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><span style="font-weight:bold"><span id="star">* </span>메일주소: </td>
+            <td colspan="5">
+              
+              <input type="text" id="id" value="" size="20" maxlength="15" required />
+              4~12자의 영문 대소문자와 숫자로만 입력
+            </td>
+          </tr>
+          <tr>
+            <td align="center"><b><span id="star">* </span>비밀번호:<b></td>
+              <td colspan="5">
+                <input type="password" id="pw" value="" size="20" onblur="checkPw()" required />
+                4~12자의 영문 대소문자와 숫자로만 입력
+              </td>
+            </tr>
+            <tr>
+              <td align="center"><b style=" font-size:10pt"><span id="star">* </span>비밀번호확인:<b></td>
+                <td colspan="5">
+                  <input type="password" id="repw" value="" size="20" required />
+                  
+                </td>
+              </tr>
+              <tr>
+                <td align="center"><span style="font-weight:bold"><span id="star">* </span>메일주소:</td>
           <td colspan="5">
             <input type="text" id="mail" value="" size="30" required />
             예) id@domain.com
@@ -55,71 +56,22 @@
           <th align="center" colspan="5" bgcolor="#D4613E">개인 신상 정보</th>
         </tr>
         <tr>
-          <td align="center"><b><span id="star">* </span>주민등록번호 :<b></td>
-          <td colspan="5">
-            <input type="text" id="id_num_1" value="" maxlength="6" size="8" required /> -</input>
-            <input type="password" id="id_num_2" value="" maxlength="7" size="8" required /></input>
-  
-            예) 123456-1234567
-          </td>
-        </tr>
-        <tr>
-          <td align="center"><b>생일 :<b></td>
-          <td>
-          <td>
-            <input type="text" style="width:80px" id="years" readonly />년
-            <select id="month" name="month" style="width:50px">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-            </select>월
-  
-            <select id="day" name="day" style="width:50px">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-
-  
-            </select>일
-  
-  
+          <td align="center"><b><span id="star">* </span>성별:<b></td>
+            <td colspan="5">
+              <select name="gender" id="gender" style="width: 90px">
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+                <option value="notSelected">선택하지 않음</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td align="center"><b>*생년월일:<b></td>
+              
+              <td>
+                <select id="year" name="year" style="width: 90px" required></select>년
+                <select id="month" name="month" style="width:40px" required></select>월
+                <select id="day" name="day" style="width:40px" required></select>일
           </td>
   
         <tr>
@@ -134,19 +86,52 @@
         </tr>
         <tr rowspan="5">
           <td align="center"><b>자기소개:<b></td>
-          <td colspan="5">
-            <textarea name="introdutcion" rows="5" cols="55"></textarea></td>
+            <td colspan="5">
+              <textarea name="introdutcion" rows="5" cols="55"></textarea></td>
         </tr>
       </table>
       <br>
       <center>
+        <p style="margin: 0;">* 표시는 반드시 기입해주세요!</p><br>
         <input type="submit" name="join" value="회원 가입" align="middle">
         <input type="reset" name="reset" value="다시 입력" align="center">
-    </form>
+      </form>
     </center>
-  
-  
-
     
+    
+    
+    
+  <script>
+  
+  // 로그인 페이지, jquery
+
+    $(document).ready(function(){            
+        var now = new Date();
+        var year = now.getFullYear();
+        var mon = (now.getMonth() + 1) > 9 ? ''+(now.getMonth() + 1) : '0'+(now.getMonth() + 1); 
+        var day = (now.getDate()) > 9 ? ''+(now.getDate()) : '0'+(now.getDate());
+    
+    
+    for(let i=1; i<=year ; i++) {
+        $('#year').append('<option value="' + i + '">' + i + '년</option>');
+    }
+    
+    for(var i=1; i <= 12; i++) {
+        var mm = i > 9 ? i : "0"+i ;            
+        $('#month').append('<option value="' + mm + '">' + mm + '월</option>');    
+    }
+    
+    for(var i=1; i <= 31; i++) {
+        var dd = i > 9 ? i : "0"+i ;            
+        $('#day').append('<option value="' + dd + '">' + dd + '일</option>');
+    }
+    
+    $("#year  > option[value="+year+"]").attr("selected", "true");        
+        $("#month  > option[value="+mon+"]").attr("selected", "true");    
+        $("#day  > option[value="+day+"]").attr("selected", "true");  
+    
+    });
+    </script>
+  
 </body>
-</html>
+  </html>
