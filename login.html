@@ -39,6 +39,24 @@
                   
                 </td>
               </tr>
+
+              <tr weight="800">
+                <td align="center"><b><span id="star">* </span>연락처:<b></td>
+                  <td colspan="5">
+                    
+                    <input type="text" id="phoneNumber" value="" size="20" maxlength="11" required 
+                    oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');"
+
+                    />
+                    "-" 없이 숫자만 입력, 회원 확인 목적 이외의 용도로 사용되지 않습니다.
+                  </td>
+                </tr>
+                 <!-- 숫자입력만 가능하도록(복붙도 입력되지 않도록) 하는 정규표현식 참고: 
+                  https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions
+                  https://beomy.tistory.com/21-->
+
+
+
               <tr>
                 <td align="center"><span style="font-weight:bold"><span id="star">* </span>메일주소:</td>
           <td colspan="5">
@@ -82,17 +100,26 @@
             <input type="checkbox" name="favorite" value="여행">여행
             <input type="checkbox" name="favorite" value="영화감상">영화감상
             <input type="checkbox" name="favorite" value="음악감상">음악감상
+            <input type="checkbox" name="favorite" value="기타">기타(해당없음 포함)
+          </td>
           </td>
         </tr>
         <tr rowspan="5">
           <td align="center"><b>자기소개:<b></td>
             <td colspan="5">
               <textarea name="introdutcion" rows="5" cols="55"></textarea></td>
-        </tr>
+            <tr>
+              <td align="center"><b>소개내용<br>공개여부<b></b></td>
+              <td colspan="5">
+              <input type="checkbox" name="favorite" value="소개공개">다른 유저에게 자기소개를 표시합니다.
+              <input type="checkbox" name="favorite" value="소개비공개">다른 유저에게 자기소개를 표시하지 않습니다
+              </td>
+            </tr>
+          </tr>
       </table>
       <br>
       <center>
-        <p style="margin: 0;">* 표시는 반드시 기입해주세요!</p><br>
+        <p style="margin: 0;"><b>* 표시는 반드시 기입해주세요!</b></p><br>
         <input type="submit" name="join" value="회원 가입" align="middle">
         <input type="reset" name="reset" value="다시 입력" align="center">
       </form>

@@ -24,4 +24,3 @@ function handleVisible() {
     }
 }
 
-console.log(rating);
