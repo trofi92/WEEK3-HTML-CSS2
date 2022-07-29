@@ -21,21 +21,21 @@
           <td align="center"><b><span id="star">* </span>아이디:<b></td>
             <td colspan="5">
               
-              <input type="text" id="id" value="" size="20" maxlength="15" required />
+              <input type="text" id="id" value="" size="20" minlength="4" maxlength="12" required />
               4~12자의 영문 대소문자와 숫자로만 입력
             </td>
           </tr>
           <tr>
             <td align="center"><b><span id="star">* </span>비밀번호:<b></td>
               <td colspan="5">
-                <input type="password" id="pw" value="" size="20" onblur="checkPw()" required />
+                <input type="password" id="pw" value="" minlength="4" maxlength="12" size="12" onblur="checkPw()" required />
                 4~12자의 영문 대소문자와 숫자로만 입력
               </td>
             </tr>
             <tr>
               <td align="center"><b style=" font-size:10pt"><span id="star">* </span>비밀번호확인:<b></td>
                 <td colspan="5">
-                  <input type="password" id="repw" value="" size="20" required />
+                  <input type="password" id="repw" value="" minlength="4" maxlength="12" size="20" required />
                   
                 </td>
               </tr>
@@ -120,14 +120,14 @@
       <br>
       <center>
         <p style="margin: 0;"><b>* 표시는 반드시 기입해주세요!</b></p><br>
-        <input type="submit" name="join" value="회원 가입" align="middle">
+        <input class="joinComplete" type="submit" onclick="handleJoinInput()" name="join" value="회원 가입" align="middle">
         <input type="reset" name="reset" value="다시 입력" align="center">
       </form>
     </center>
     
     
     
-    
+    <script src="app.js"></script>
   <script>
   
   // 로그인 페이지, jquery

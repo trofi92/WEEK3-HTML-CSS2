@@ -19,7 +19,7 @@ hr {
 
 table, th, td {
     border: 1px;
-    background: rgba(217,237,24,1);
+    background: linear-gradient(135deg, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%);
   
     
 }
@@ -54,11 +54,11 @@ footer {
 }
 
 .container {
-    background-image: radial-gradient(circle, #e4e79d, #e3e287, #e3dc71, #e3d659, #e5cf3f);
+    background-color: azure ; 
     justify-content: center;
     text-align: center;
     align-items: center;
-    border: 1px solid tomato;
+    border: 1px solid #D8E8F4;
     border-radius: 25px;
     height: 1260px;
     width: 650px;

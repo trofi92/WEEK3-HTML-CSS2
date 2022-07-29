@@ -24,3 +24,17 @@ function handleVisible() {
     }
 }
 
+
+function openMain(){
+    window.close(self);
+    window.open("./index.html");
+}
+
+function handleJoinInput(){
+    // event.preventDefault();
+    document.getElementsByClassName("joinComplete");
+    addEventListener("click", alert("가입완료!"));
+    openMain();
+};
+
+

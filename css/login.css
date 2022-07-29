@@ -1,6 +1,12 @@
 @import "reset.css";
 
 body {
-    
+    height: 50px;
     font-family: "Poppins", sans-serif;
-    background-image: radial-gradient(circle, #e4e79d, #e3e287, #e3dc71, #e3d659, #e5cf3f);}
+    background: linear-gradient(135deg, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
+}
+
+form {
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
