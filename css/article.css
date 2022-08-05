@@ -9,7 +9,7 @@ article {
 
 
 .arti-a {
-    width: 33%;
+    width: 20%;
 }
 
 .arti-a img{
@@ -21,7 +21,7 @@ article {
 
 
 .arti-b { 
-    width: 33%;
+    width: 20%;
 }
 
 
@@ -37,11 +37,11 @@ article {
 .arti-c {
     margin-top: 18px;
     margin-bottom: 10px;
-    width : 33%;
+    width : 20%;
 }
 
 .sec-a {
-    width: 50%;
+    width: 20%;
     float: left;
     text-align:left
     
@@ -55,6 +55,7 @@ article {
 }
 
 .sec-b{
+    width: 20%;
     display: flex;
     text-align: center;
     justify-content: center;

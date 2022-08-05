@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login.css" />
+
+    <title>회원가입</title>
+  </head>
+  <body>
+    <div class="login">
+      <form name="form-login">
+        <h1>회원가입</h1>
+
+        <label for="name">Email</label>
+        <input type="email" id="name" placeholder="Username" required />
+
+        <label for="pw">Password</label>
+        <input type="password" id="pw" placeholder="Password" required />
+
+        <ul class="helper-text">
+          <li class="length">비밀번호는 8자 이상 입력해주세요.</li>
+          <li class="lowercase">영어 소문자를 포함해주세요.</li>
+          <li class="uppercase">영어 대문자를 포함해주세요.</li>
+          <li class="special">숫자, 특수문자를 1개 이상 포함해주세요.</li>
+        </ul>
+        <input
+          id="rgstr_btn"
+          type="submit"
+          value="가입하기"
+          onclick="store()"
+        />
+      </form>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!-- 테이블 이용한 로그인 폼, 제출시 사용하지 않음. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <title>login</title>
+  </head>
+
+  <body bgcolor='#CAC3B2'>
+
+    
+    <form name="input" method="post" action="">
+      <table border="1" weigth="600" align="center" cellspacing="0">
+        <tr>
+          <th colspan="5" weight="600" align="center" bgcolor="#99B6BD"><span id="star"></span>회원 기본 정보</th>
+        </tr>
+        <tr weight="800">
+          <td align="center"><b><span id="star">* </span>아이디:<b></td>
+            <td colspan="5">
+              
+              <input type="text" id="id" value="" size="20" minlength="4" maxlength="12" required />
+              4~12자의 영문 대소문자와 숫자로만 입력
+            </td>
+          </tr>
+          <tr>
+            <td align="center"><b><span id="star">* </span>비밀번호:<b></td>
+              <td colspan="5">
+                <input type="password" id="pw" value="" minlength="4" maxlength="12" size="12" onblur="checkPw()" required />
+                4~12자의 영문 대소문자와 숫자로만 입력
+              </td>
+            </tr>
+            <tr>
+              <td align="center"><b style=" font-size:10pt"><span id="star">* </span>비밀번호확인:<b></td>
+                <td colspan="5">
+                  <input type="password" id="repw" value="" minlength="4" maxlength="12" size="20" required />
+                  
+                </td>
+              </tr>
+
+              <tr weight="800">
+                <td align="center"><b><span id="star">* </span>연락처:<b></td>
+                  <td colspan="5">
+                    
+                    <input type="text" id="phoneNumber" value="" size="20" maxlength="11" required 
+                    oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');"
+
+                    />
+                    "-" 없이 숫자만 입력, 회원 확인 목적 이외의 용도로 사용되지 않습니다.
+                  </td>
+                </tr>
+                 <!-- 숫자입력만 가능하도록(복붙도 입력되지 않도록) 하는 정규표현식 참고: 
+                  https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions
+                  https://beomy.tistory.com/21-->
+
+
+
+              <tr>
+                <td align="center"><span style="font-weight:bold"><span id="star">* </span>메일주소:</td>
+          <td colspan="5">
+            <input type="text" id="mail" value="" size="30" required />
+            예) id@domain.com
+          </td>
+        </tr>
+        <tr>
+          <td align="center"><b><span id="star">* </span>이름: </b></td>
+          <td colspan="5">
+            <input type="text" id="name" value="" size="30" required />
+          </td>
+        </tr>
+        <tr>
+          <th align="center" colspan="5" bgcolor="#D4613E">개인 신상 정보</th>
+        </tr>
+        <tr>
+          <td align="center"><b><span id="star">* </span>성별:<b></td>
+            <td colspan="5">
+              <select name="gender" id="gender" style="width: 90px">
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+                <option value="notSelected">선택하지 않음</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td align="center"><b>*생년월일:<b></td>
+              
+              <td>
+                <select id="year" name="year" style="width: 90px" required></select>년
+                <select id="month" name="month" style="width:40px" required></select>월
+                <select id="day" name="day" style="width:40px" required></select>일
+          </td>
+  
+        <tr>
+          <td id="interested" align="center"><b>관심분야:</b></td>
+          <td colspan="5">
+            <input type="checkbox" name="favorite" value="컴퓨터">컴퓨터
+            <input type="checkbox" name="favorite" value="인터넷">인터넷
+            <input type="checkbox" name="favorite" value="여행">여행
+            <input type="checkbox" name="favorite" value="영화감상">영화감상
+            <input type="checkbox" name="favorite" value="음악감상">음악감상
+            <input type="checkbox" name="favorite" value="기타">기타(해당없음 포함)
+          </td>
+          </td>
+        </tr>
+        <tr rowspan="5">
+          <td id="intro" align="center"><b>자기소개:<b></td>
+            <td colspan="5">
+              <textarea name="introdutcion" rows="5" cols="55"></textarea></td>
+            <tr>
+              <td id="exposure" align="center"><b>소개내용<br>공개여부<b></b></td>
+              <td colspan="5">
+              <input type="checkbox" name="favorite" value="소개공개">다른 유저에게 자기소개를 표시합니다.
+              <input type="checkbox" name="favorite" value="소개비공개">다른 유저에게 자기소개를 표시하지 않습니다
+              </td>
+            </tr>
+          </tr>
+      </table>
+      <br>
+      <center>
+        <p style="margin: 0;"><b>* 표시는 반드시 기입해주세요!</b></p><br>
+        <input class="joinComplete" type="submit" onclick="handleJoinInput()" name="join" value="회원 가입" align="middle">
+        <input type="reset" name="reset" value="다시 입력" align="center">
+      </form>
+    </center>
+    
+    
+    
+    <script src="app.js"></script>
+    <script src="login.js"></script>
+
+
+  <script>
+  
+  // 로그인 페이지, jquery
+
+    $(document).ready(function(){            
+        var now = new Date();
+        var year = now.getFullYear();
+        var mon = (now.getMonth() + 1) > 9 ? ''+(now.getMonth() + 1) : '0'+(now.getMonth() + 1); 
+        var day = (now.getDate()) > 9 ? ''+(now.getDate()) : '0'+(now.getDate());
+    
+    
+    for(let i=1; i<=year ; i++) {
+        $('#year').append('<option value="' + i + '">' + i + '년</option>');
+    }
+    
+    for(var i=1; i <= 12; i++) {
+        var mm = i > 9 ? i : "0"+i ;            
+        $('#month').append('<option value="' + mm + '">' + mm + '월</option>');    
+    }
+    
+    for(var i=1; i <= 31; i++) {
+        var dd = i > 9 ? i : "0"+i ;            
+        $('#day').append('<option value="' + dd + '">' + dd + '일</option>');
+    }
+    
+    $("#year  > option[value="+year+"]").attr("selected", "true");        
+        $("#month  > option[value="+mon+"]").attr("selected", "true");    
+        $("#day  > option[value="+day+"]").attr("selected", "true");  
+    
+    });
+    </script>
+  
+</body>
+  </html> -->

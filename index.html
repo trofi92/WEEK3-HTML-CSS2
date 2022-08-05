@@ -9,36 +9,70 @@
 </head>
 
 <body>
-<div class="container">
- <nav class="nav-style">
-    <h1>Node.js 3주차 과제</h1>
-    <h2>자기소개서 예제</h2><br>
-    <h3 style="margin-left : 550px; display: inline-blockr;">엄세영</h3>
- </nav>
-<br>
 
-<div class="contents">
- <table style="border: 1; width: 300px;">
-    <caption style="font-weight: 500;">목차</caption>
-    <br>
-    <tr>
-    <td>1. 출생</td>
-    <td>2. 학력</td>
-    <td>3. 경력</td>
-    <td>4. 소개</td>
-    <td>5. 참고자료</td>
-    </tr>
-</table>
+ <div class="vote">
+  <button
+    class="visible"
+    onclick="handleVisible()"
+    type="button"
+    >평가에 참여해주세요!
+  </button>
+
+<form id="rating" style= "display: none;";
+">
+  <br>
+  <fieldset>
+    <legend style="font-size: 0.7em;">페이지 내용은 어떠셨나요?</legend>
+
+    <input class="input-hover" type="radio" id="훌륭했음" name="평가">
+    <label class="input-hover" for="훌륭했음">Good</label><br/>
+
+    <input class="input-hover" type="radio" id="평범했음" name="평가">
+    <label class="input-hover" for="평범했음">Normal</label><br/>
+
+    <input class="input-hover" type="radio" id="부족했음" name="평가">
+    <label class="input-hover" for="부족했음">Bad</label><br>
+
+    <input class="submit"
+            onClick="handleSubmitInput()"
+            type="submit" 
+            placeholder="제출"
+            style="border: 1px solid azure; border-radius: 10%;
+            font-weight: 600;
+            width: 50px;
+            cursor: pointer;"
+            >
+  </fieldset>
+
+</form>
 </div>
-<br>
 
 
-<hr class="line-gradient">
 
 
-<div class="article-box">
 
-<article class="arti-a"> <p><b>1. 출생</b> <br>
+
+
+
+
+ <nav class="nav-style">
+    <h1>?</h1>
+    <h2>?</h2><br>
+    <h3>엄세영</h3>
+
+    <br>
+ </nav>
+
+
+
+
+
+<!-- <hr class="line-gradient"> -->
+
+
+<article class="article-box">
+
+<article class="arti-a"> <b>1. 출생</b> <br>
     <img src="img/syPhoto.jpg">
 <li>생년월일 : 1992년 4월 9일</li><br>
 <li>출생지 : 대한민국 대구광역시</li><br>
@@ -56,10 +90,9 @@
     <li>엠에프지코리아 <br> "Mad for garlic" <br>파트타이머 및 정규직 <br>(2016.7월 입사,<br> 2020.1월 정규직 전환<br>
         최종직급 : FOH Captain)</li>
 </article>
-</div>
 
 
-<hr class="line-gradient">
+<!-- <hr class="line-gradient"> -->
 
 <section class="sec-a"> <p style="text-align: center;"> <b>
 4. 소개</b></p><br>
@@ -75,17 +108,19 @@
 <section class="sec-b">
     <div class="source">
         <b>5. 참고자료(LINK)</b> : <br><br> 
-        <b> Button : </b><br><br>  <p style="margin-bottom: 2em;"><a href="https://www.youtube.com/c/OnlineTutorials4Designers/videos">Yotube channel "Online Tutorials"</a></p>
-        <b>Background Color:</b><br><br> <p style="margin-bottom: 2em;"><a href="https://mycolor.space/gradient?ori=circle&hex=%23E4E79D&hex2=%23E5CF3F&sub=1"> mycolor.space</a> </p>
+         <p style="margin-bottom: 2em;"><a href="https://www.youtube.com/c/OnlineTutorials4Designers/videos">Yotube channel "Online Tutorials"</a></p>
+         <p style="margin-bottom: 2em;"><a href="https://mycolor.space/gradient?ori=circle&hex=%23E4E79D&hex2=%23E5CF3F&sub=1"> mycolor.space</a> </p>
         <p><a href="https://cssgradient.io/">CSS Gradient</a> </p>
     </div>
 </section>
+</article>
 
 <br>
 <footer>
-    <hr class="line-gradient">
-    <p><b>CONTACT</b></p><br>
-<ul>
+    <!-- <hr class="line-gradient"> -->
+    
+<ul class>
+  <p><b>CONTACT</b></p>
     <li style="--i: #a955ff; --j: #ea51ff">
       <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
       <span class="title"><a class="a-tag" href="https://github.com/trofi92">Home</a></span>
@@ -110,52 +145,22 @@
     </li> -->
   </ul>
 
+ 
 
-</footer>
-<hr class="line-gradient">
-<button style="font-size: 15px; font-weight:700; display: inline-block;"
-class="visible"
-onclick="handleVisible()"
-type="button"
->평가에 참여해주세요!</button>
-<form id="rating" style= "display: none;";
-">
-  <br>
-  <fieldset>
-    <legend>페이지 내용은 어떠셨나요?</legend>
-
-    <input class="input-hover" type="radio" id="훌륭했음" name="평가">
-    <label class="input-hover" for="훌륭했음">Good</label><br/>
-
-    <input class="input-hover" type="radio" id="평범했음" name="평가">
-    <label class="input-hover" for="평범했음">Normal</label><br/>
-
-    <input class="input-hover" type="radio" id="부족했음" name="평가">
-    <label class="input-hover" for="부족했음">Bad</label><br>
-
-    <input class="submit"
-    onClick="handleSubmitInput()"
-    type="submit" 
-    placeholder="제출"
-    style="border: 2px dashed azure; border-radius: 10%;
-    font-weight: 600;
-    background-color: yellow;
-    width: 150px;
-    cursor: pointer;"
-    >
-
-  </fieldset>
-</form>
 <h3>↓More Info? Click here!↓</h3>
 <br>
 <ul>
 <li style="--i: #ffa9c6; --j: #f434e2; display: inline-flex; overflow : hidden;">
   <span class="icon"><ion-icon name="checkmark-done-outline"></ion-icon></span>
-  <span class="title"><a class="a-tag" class="to-login" onClick="handleToLogin()" href="/home/edu02/WEEK3-HTML-CSS2/login.html">Join</a></span>
+  <span class="title"><a class="a-tag" class="to-login" onClick="handleToLogin()" href="/home/edu02/WEEK3-HTML-CSS2/register.html">Join</a></span>
 </li>
 </ul>
+</footer>
 
-</div>
+
+
+
+
 </div>
 
 
