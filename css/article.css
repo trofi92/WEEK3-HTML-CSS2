@@ -1,3 +1,5 @@
+@import "./style.css";
+
 article {
     display: inline;
     justify-content: center;
@@ -8,28 +10,21 @@ article {
 }
 
 
-.arti-a {
-    width: 20%;
-}
-
 .arti-a img{
     margin-top: 5px;
     margin-bottom: 10px;
-    border: 1px solid #ff9966;
+    height : 30em;
+    border: 1px solid; 
     border-radius: 50%;
 }
 
-
-.arti-b { 
-    width: 20%;
-}
 
 
 .arti-b img{
     margin-top: 5px;
     margin-bottom: 10px;
-    height : 160px;
-    border: 1px solid #ff9966;
+    height : 30em;
+    border: 1px solid;
     border-radius: 50%;
 
 }
@@ -37,11 +32,9 @@ article {
 .arti-c {
     margin-top: 18px;
     margin-bottom: 10px;
-    width : 20%;
 }
 
 .sec-a {
-    width: 20%;
     float: left;
     text-align:left
     
@@ -55,15 +48,16 @@ article {
 }
 
 .sec-b{
-    width: 20%;
+    list-style: none;
+    padding: 0;
     display: flex;
     text-align: center;
     justify-content: center;
 }
 
 .sec-b a:hover {
-    background-color: floralwhite;
-    border-radius: 99%;
-    opacity: 0.7;
-    transition: 0.8s;
+    background-color: rgba(255, 255, 255, 0.014);
+    opacity: 0.6;
+    transition: 1s;
+    animation: heartBeat 1s linear infinite;
 }

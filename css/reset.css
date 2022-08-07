@@ -21,8 +21,9 @@
    */
   
   body {
+    height: 100vh;
     margin: 0;
-    color: tomato;
+    color: white;
     background-color: #3b4148;
   }
   

@@ -21,6 +21,44 @@ function handleVisible() {
     }
 }
 
+
+
+//캐러셀 효과
+document.querySelector(".btn2").addEventListener('click', function(){
+    document.querySelector(".article-box").style.transform = "translate(-100vw)";
+})
+
+document.querySelector(".btn3").addEventListener('click', function(){
+    document.querySelector(".article-box").style.transform = "translate(-200vw)";
+})
+
+document.querySelector(".btn4").addEventListener('click', function(){
+    document.querySelector(".article-box").style.transform = "translate(-300vw)";
+})
+
+document.querySelector(".btn5").addEventListener('click', function(){
+    document.querySelector(".article-box").style.transform = "translate(-400vw)";
+})
+
+document.querySelector(".btn1").addEventListener('click', function(){
+    document.querySelector(".article-box").style.transform = "translate(0vw)";
+
+})
+
+
+// 이전,다음 :  클래스를 추가한 뒤 수신해서 삭제하는 함수 구현할것
+// document.querySelector(".prev").addEventListener('click', function(){
+//     document.querySelector(".this").style.transform = "translate(-100vw)";
+//     button.classList.remove("this");
+// })
+
+
+
+
+
+
+
+
 // 로그인-테이블 페이지 함수, 제출시 사용하지 않음.
 // function openMain(){
 //     window.close(self);
