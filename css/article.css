@@ -9,6 +9,17 @@ article {
     list-style: square;
 }
 
+article b {
+    font-size: 2em;
+}
+
+section b {
+    font-size: 2em;
+}
+
+.arti-a li {
+    font-size: 1.5em;
+}
 
 .arti-a img{
     margin-top: 5px;
@@ -18,7 +29,9 @@ article {
     border-radius: 50%;
 }
 
-
+.arti-b li {
+    font-size: 1.5em;
+}
 
 .arti-b img{
     margin-top: 5px;
@@ -29,6 +42,9 @@ article {
 
 }
 
+.arti-c li {
+    font-size: 1.5em;
+}
 .arti-c {
     margin-top: 18px;
     margin-bottom: 10px;
@@ -41,6 +57,7 @@ article {
 }
 
 .sec-a li {
+    font-size: 1.5em;
     text-align:justify;
     padding-left: 1.5em;
     text-indent: 0.2em;
@@ -53,11 +70,19 @@ article {
     display: flex;
     text-align: center;
     justify-content: center;
+    transition: 1s ease;
+}
+
+.sec-b li {
+    font-size: 1.5em;
+}
+
+.sec-b a {
+    transition: 1s ease;    
 }
 
 .sec-b a:hover {
-    background-color: rgba(255, 255, 255, 0.014);
-    opacity: 0.6;
-    transition: 1s;
-    animation: heartBeat 1s linear infinite;
+    transition: 0.7s ease;
+    font-weight: 600;
+    letter-spacing: 0.3em;
 }

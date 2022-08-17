@@ -46,11 +46,7 @@ document.querySelector(".btn1").addEventListener('click', function(){
 })
 
 
-// 이전,다음 :  클래스를 추가한 뒤 수신해서 삭제하는 함수 구현할것
-// document.querySelector(".prev").addEventListener('click', function(){
-//     document.querySelector(".this").style.transform = "translate(-100vw)";
-//     button.classList.remove("this");
-// })
+
 
 
 

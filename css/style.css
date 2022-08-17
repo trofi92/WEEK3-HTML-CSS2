@@ -8,9 +8,61 @@ a {
 }
 
 
+/* background dots */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    min-height: 100vh;
+    background : #0c192c;
+    overflow: hidden;
+}
 
+.back-dots {
+  z-index: -1;
+    position:fixed;
+    width : 100%;
+    height:100vh;
+    overflow:hidden;
+}
 
+.bubbles {
+    position : relative;
+    display: flex;
+}
+
+.bubbles span {
+    position:relative;
+    width:30px;
+    height : 30px;
+    background:#4fc3dc;
+    margin : 0 4px;
+    border-radius: 50%;
+    box-shadow : 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration : calc(125s/var(--i));
+}
+.bubbles span:nth-child(even) {
+    background:#ff2d75;
+    box-shadow : 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate
+{
+    0%{
+        transform : translateY(100vh) scale(0);
+    }
+    100%{
+        transform : translateY(-10vh) scale(1);
+    }
+}
 
 /* 투표창 스타일 */
 .vote {
@@ -56,11 +108,13 @@ footer {
     font-family: "Helvetica";
     justify-content: center;
     text-align: center;
-    /* position: fixed; */
     width: 100vw;
     margin-bottom: 5em;
 }
 
+footer p {
+  margin: 0 0 15px 0;
+}
 
 .article-box {
     display: flex;
@@ -109,34 +163,21 @@ footer {
 
 @keyframes heartBeat {
   0% {
-    color: white;
     transform: none;
   }
   25%{
-    color: #e3d659;
     transform : scale(1.2);
   }
   50% {
-    color: tomato;
     transform: scale(1.5);
   }
   25%{
-    color: #e3d659;
     transform : scale(1.2);
   }
   100% {
-    color: white;
     transform: none;
   }
 }
-
-
-/* .container {
-    border: 1px solid #D8E8F4;
-    border-radius: 25px;
-    height: 100vh;
-    width: 100vw;
-} */
 
 
 .Fs {
@@ -160,15 +201,16 @@ fieldset .input-hover:hover {
 
 
 
-/* .splash-screen {
-  background: url(/home/edu02/WEEK3-HTML-CSS2/img/earphone.jpg);
-  position: absolute;
+.splash-screen {
+  background:url(/img/earphone.jpg);
+  background-repeat:repeat-x;
+  z-index: 2;
+  /* position: fixed; */
   height: 100vh;
   width: 100vw;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   animation: hideSplashScreen 0.3s ease-in-out forwards;
   animation-delay: 2s;
 }
@@ -182,4 +224,4 @@ fieldset .input-hover:hover {
     opacity: 0;
     visibility: hidden;
   }
-} */
+}
